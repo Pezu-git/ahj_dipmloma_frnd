@@ -59,7 +59,7 @@
 .chat {
   padding: 10px;
   height: 83%;
-  background: url('../img/background.jpg') no-repeat;
+  
   background-size: cover;
   overflow-y: auto;
   overflow-x: hidden;
@@ -71,8 +71,8 @@
   margin-right: 0;
   width: 250px;
   height: fit-content;
-  background-color: rgb(202, 247, 181);
-  border: 1px solid rgb(202, 247, 181);
+  background-color: rgb(158, 164, 248);
+  border: 1px solid rgb(158, 164, 248);
   border-radius: 10px;
 }
 

@@ -42,7 +42,7 @@ export default class Layout {
   createHeaderTitle() {
     this.headerTitleEl = document.createElement('div');
     this.headerTitleEl.className = 'header__title';
-    this.headerTitleEl.textContent = 'Saved messages';
+    this.headerTitleEl.textContent = 'Messages';
     return this.headerTitleEl;
   }
 
@@ -58,21 +58,25 @@ export default class Layout {
   }
 
   createSettings() {
+    const settingsArr = [
+      'Новая группа',
+      'Новая рассылка',
+      'Настройка']
     this.settingsEl = document.createElement('div');
     this.settingsEl.className = 'settings hidden';
     this.settingsEl.append(
-      this.createSetting(),
-      this.createSetting(),
-      this.createSetting(),
-      this.createSetting(),
+      
+      this.createSetting('Новая группа'),
+      this.createSetting('Новая рассылка'),
+      this.createSetting('Настройка'),
     );
     this.body.append(this.settingsEl);
   }
 
-  createSetting() {
+  createSetting(set) {
     this.settingEl = document.createElement('div');
     this.settingEl.className = 'setting';
-    this.settingEl.textContent = 'Настройка';
+    this.settingEl.textContent = set
     return this.settingEl;
   }
 
@@ -221,7 +225,7 @@ export default class Layout {
   createSectionTitle() {
     this.sectionTitleEl = document.createElement('div');
     this.sectionTitleEl.className = 'section__title';
-    this.sectionTitleEl.textContent = 'Shared media';
+    this.sectionTitleEl.textContent = 'Media';
     return this.sectionTitleEl;
   }
 
