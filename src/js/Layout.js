@@ -62,14 +62,14 @@ export default class Layout {
       'Новая группа',
       'Новая рассылка',
       'Настройка']
+
     this.settingsEl = document.createElement('div');
     this.settingsEl.className = 'settings hidden';
-    this.settingsEl.append(
-      
-      this.createSetting('Новая группа'),
-      this.createSetting('Новая рассылка'),
-      this.createSetting('Настройка'),
-    );
+    for (let i=0; i < settingsArr.length; i++) {
+      this.settingsEl.append(
+        this.createSetting(settingsArr[i]),
+      );
+    }
     this.body.append(this.settingsEl);
   }
 
@@ -253,12 +253,16 @@ export default class Layout {
     this.coordsEl = document.createElement('div');
     this.coordsEl.className = 'section__coords';
     this.coordsEl.textContent = 'Ваше текущее местоположение';
+    this.coordsEl.style.fontWeight = 'bold'
     this.p1 = document.createElement('p');
     this.p1.textContent = `Широта: ${lang}`;
+    this.p1.style.color = 'rgb(114, 123, 240)'
     this.p2 = document.createElement('p');
     this.p2.textContent = `Долгота: ${long}`;
+    this.p2.style.color = 'rgb(114, 123, 240)'
     this.p3 = document.createElement('p');
     this.p3.textContent = `Точность: ${accuracy} метров`;
+    this.p3.style.color = 'rgb(114, 123, 240)'
     this.coordsEl.append(this.p1, this.p2, this.p3);
     this.sectionEl.append(this.coordsEl);
   }

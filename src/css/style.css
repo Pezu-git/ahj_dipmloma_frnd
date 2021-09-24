@@ -31,6 +31,8 @@
   font-size: 16px;
   padding: 15px;
   height: 10%;
+
+  cursor: default;
 }
 
 .header__buttons {
@@ -113,6 +115,10 @@
   fill: rgb(24, 189, 9);
 }
 
+.icon, #close {
+  cursor: pointer;
+}
+
 .input-box {
   display: flex;
   align-items: center;
@@ -157,6 +163,8 @@
 .section {
   width: 30%;
   background-color: rgb(252, 248, 248);
+
+  cursor: default;
 }
 
 .section__header {
@@ -168,6 +176,10 @@
   padding: 15px;
   height: 10%;
   background-color: white;
+}
+
+.section__title {
+  cursor: default;
 }
 
 .section__exit {
@@ -286,6 +298,8 @@
   padding: 15px;
   font-weight: bold;
   border-bottom: 2px solid grey;
+
+  cursor: default;
 }
 
 .files-window__header#close:hover {
